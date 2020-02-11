@@ -1,0 +1,152 @@
+* {margin: 0;padding: 0;border: none;}
+html,body{height: 100%;width: 100%;font-size: 12px}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr;
+    height: 100%;
+    width: 100%;
+    background: #090E1C;
+    color: #16ADDA;
+}
+
+.container > .title {
+    display: flex;
+    border:10px solid #33A8A5;
+    margin-left: 1%;
+    margin-right: 1%;
+    /*background: #33A8A5;*/
+    margin-bottom: 1%;
+    justify-content: center;
+    font-size: 7rem;
+}
+
+.container > .content {
+    display: grid;
+    grid-template-columns: repeat(6,15.5%);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "device map map map map protection"
+                         "trade map map map map weight"
+                         "area map map map map height"
+                         "tip alarm stats stats time km";
+
+    justify-content:space-evenly;
+    /*background: #090E1C;*/
+}
+/*TODO 客户总数、设备总数、搜索列表 可以使用grid-area 指定区域 z-index覆盖到MAP*/
+.container > .content > .client_count {
+    border:10px solid cornsilk;
+    /*background: cornsilk;*/
+    height: 55%;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.container > .content > .device_count {
+    border:10px solid deeppink;
+    position: relative;
+    /*background: deeppink;*/
+    height: 55%;
+    grid-area: 2 / 2 / span 1 / span 1;
+    bottom: 37%;
+}
+
+.container > .content > .search {
+    height: 90%;
+    border:10px solid mediumseagreen;
+    /*background: mediumseagreen;*/
+    /*height: 55%;*/
+    grid-area: 2 / 5 / span 2 / span 1;
+}
+
+.container > .content > .compass {
+    border:10px solid pink;
+    /*background: pink;*/
+    height: 70%;
+    width: 40%;
+    grid-area: 1 / 5 / span 1 / span 1;
+    justify-self:end;
+    align-self: end;
+}
+
+.container > .content > .device {
+    border:10px solid darkgoldenrod;
+    height: 85%;
+    /*background: darkgoldenrod;*/
+    grid-area: device;
+}
+
+.container > .content > .map {
+    border:10px solid darkred;
+    /*background: darkred;*/
+    grid-area: map;
+}
+
+.container > .content > .protection {
+    border:10px solid green;
+    height: 85%;
+    /*background: green;*/
+    grid-area: protection;
+}
+
+.container > .content > .trade {
+    height: 85%;
+    border:10px solid orangered;
+    /*background: orangered;*/
+    grid-area: trade;
+}
+
+.container > .content > .weight {
+    height: 85%;
+    border:10px solid deepskyblue;
+    /*background: deepskyblue;*/
+    grid-area: weight;
+}
+
+.container > .content > .area {
+    height: 85%;
+    border:10px solid blueviolet;
+    /*background: blueviolet;*/
+    grid-area: area;
+}
+
+.container > .content > .height {
+    height: 85%;
+    border:10px solid skyblue;
+    /*background: skyblue;*/
+    grid-area: height;
+}
+
+.container > .content > .tip {
+    height: 85%;
+    border:10px solid violet;
+    /*background: violet;*/
+    grid-area: tip;
+}
+
+.container > .content > .alarm {
+    height: 85%;
+    border:10px solid lightcoral;
+    /*background: lightcoral;*/
+    grid-area: alarm;
+}
+
+.container > .content > .stats {
+    height: 85%;
+    border:10px solid gray;
+    /*background: gray;*/
+    grid-area: stats;
+}
+
+.container > .content > .time {
+    height: 85%;
+    border:10px solid lawngreen;
+    /*background: lawngreen;*/
+    grid-area: time;
+}
+
+.container > .content > .km {
+    height: 85%;
+    border:10px solid darkblue;
+    /*background: darkblue;*/
+    grid-area: km;
+}
